@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tweetid: 1
+  body: MyString
+  tweeted_on: 2012-04-18 10:57:37
+  author: MyString
+
+two:
+  tweetid: 1
+  body: MyString
+  tweeted_on: 2012-04-18 10:57:37
+  author: MyString
