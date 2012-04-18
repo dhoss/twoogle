@@ -80,4 +80,22 @@ class TweetsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def search
+
+    if params[:q] && !params[:q].blank?
+      logger.debug params
+      @tweets = Tweet.search params[:q], :page => (params[:page] || 1)
+      @query  = params[:q]
+      logger.debug @tweets.to_json
+      respond_to do |format|
+        format.html
+        format.json { render_json @tweets }
+      end
+    else
+      render 'root/index'
+    end
+
+
+  end
 end

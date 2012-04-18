@@ -10,4 +10,8 @@ class Tweet < ActiveRecord::Base
     indexes :tweeted_on, :type     => 'date', :include_in_all => false
     indexes :tweetid,    :index    => :not_analyzed
   end
+
+  after_save do
+    update_index
+  end
 end

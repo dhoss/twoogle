@@ -2,6 +2,7 @@ Twoogle::Application.routes.draw do
 
   root :to => 'root#index'
   resources :tweets
+  match 'search/' => 'tweets#search'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
